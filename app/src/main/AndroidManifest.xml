@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.NguyenCuong" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/book"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher_background"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.NguyenCuong" >
+        <activity
+            android:name="com.example.NguyenCuong.main.maingiaodien"
+            android:exported="false"
+            android:label="@string/title_activity_maingiaodien"
+            android:theme="@style/Theme.NguyenCuong.NoActionBar" />
+        <activity
+            android:name="com.example.NguyenCuong.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.NguyenCuong.manhinhchao.ManHinhChao"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

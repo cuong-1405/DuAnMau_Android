@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/drawable-v24/drawable_kobogoc.xml" value="0.1255" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/drawable-v24/drawable_yellow.xml" value="0.22" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/drawable/custom_input.xml" value="0.1" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/drawable/drawable_bogoc.xml" value="0.26" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/drawable/drawable_slide.xml" value="0.195" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/drawable/drawable_while.xml" value="0.387" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/drawable/drawable_while_bottom_top.xml" value="0.2525" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/drawable/drawable_while_buttom.xml" value="0.2075" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/drawable/drawable_yellow-top_lefft.xml" value="0.225" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/drawable/drawable_yellow_top_lefft.xml" value="0.225" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/drawable/drawable_yellow_top_left.xml" value="0.225" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/drawable/drawable_yellow_top_right.xml" value="0.225" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/drawable/ic_baseline_account_box_24.xml" value="0.1965" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/drawable/ic_ock.xml" value="0.1" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/activity_maingiaodien.xml" value="0.33" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/activity_man_hinh_chao.xml" value="0.1977401129943503" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/app_bar_maingiaodien.xml" value="0.1" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/content_maingiaodien.xml" value="0.38697916666666665" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/dialog_phieumuon.xml" value="0.20253164556962025" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/dialog_themphieumuon.xml" value="0.19047619047619047" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/dialog_themsach.xml" value="0.1" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/dialog_themtt.xml" value="0.25" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/fragment_dangxuat.xml" value="0.1" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/fragment_doanhthu.xml" value="0.25" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/fragment_matkhau.xml" value="0.25" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/fragment_qlloaisach.xml" value="0.3229166666666667" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/fragment_qlphieumuon.xml" value="0.12658227848101267" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/fragment_qlsach.xml" value="0.38697916666666665" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/fragment_qlthanhvien.xml" value="0.38697916666666665" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/fragment_them.xml" value="0.11538461538461539" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/fragment_top.xml" value="0.38697916666666665" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/item_lv_addtt.xml" value="0.29310344827586204" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/item_lv_phieumuon.xml" value="0.3892100192678227" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/item_lv_top.xml" value="0.33" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/item_sach.xml" value="0.33" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/item_themtt.xml" value="0.33" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/nav_header_maingiaodien.xml" value="0.33" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/spinner_adapter_loaisach.xml" value="0.24003623188405798" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/layout/spinner_adapter_thanhvien.xml" value="0.19047619047619047" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/menu/activity_main_drawer.xml" value="0.3741496598639456" />
+        <entry key="..\:/DuAnMau/CodeAppDuAnMau/app/src/main/res/menu/maingiaodien.xml" value="0.15" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/layout/activity_main.xml" value="0.2223731884057971" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/layout/activity_maingiaodien.xml" value="0.2223731884057971" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/layout/activity_man_hinh_chao.xml" value="0.2223731884057971" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/layout/app_bar_maingiaodien.xml" value="0.2223731884057971" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/layout/content_maingiaodien.xml" value="0.2223731884057971" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/layout/dialog_phieumuon.xml" value="0.2223731884057971" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/layout/dialog_themsach.xml" value="0.2223731884057971" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/layout/dialog_themtt.xml" value="0.2223731884057971" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/layout/fragment_dangxuat.xml" value="0.2223731884057971" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/layout/fragment_doanhthu.xml" value="0.2223731884057971" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/layout/fragment_matkhau.xml" value="0.2223731884057971" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/layout/fragment_qlloaisach.xml" value="0.2223731884057971" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/layout/fragment_qlphieumuon.xml" value="0.2223731884057971" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/layout/fragment_qlsach.xml" value="0.2223731884057971" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/layout/fragment_qlthanhvien.xml" value="0.2223731884057971" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/layout/fragment_them.xml" value="0.2223731884057971" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/layout/fragment_top.xml" value="0.2223731884057971" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/layout/item_lv_addtt.xml" value="0.2223731884057971" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/layout/item_lv_phieumuon.xml" value="0.2223731884057971" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/layout/item_lv_top.xml" value="0.2223731884057971" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/layout/item_sach.xml" value="0.2223731884057971" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/layout/nav_header_maingiaodien.xml" value="0.152" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/layout/spinner_adapter_loaisach.xml" value="0.2223731884057971" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/layout/spinner_adapter_thanhvien.xml" value="0.2223731884057971" />
+        <entry key="..\:/HOC_TAP/DU_AN_MAU/ThuVienPhuongNam-master/ThuVienPhuongNam-master/app/src/main/res/menu/activity_main_drawer.xml" value="0.24947916666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.33" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

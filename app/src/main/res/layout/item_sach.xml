@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/bg1"
+    android:padding="5dp">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/item_gif"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/book1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/item_sach_masach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mã sách"
+            android:textColor="#FF0000"
+            android:textSize="16sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/item_sach_tensach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tên sách"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/item_sach_giathue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Giá Thuê"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/item_sach_maloai"
+            style="@style/Widget.AppCompat.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mã Loại"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
