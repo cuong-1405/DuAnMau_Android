@@ -8,9 +8,12 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.example.NguyenCuong.R;
+import com.example.NguyenCuong.model.LoaiSach;
 import com.example.NguyenCuong.model.Sach;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class AdapterSach extends ArrayAdapter<Sach> {
 
@@ -18,7 +21,7 @@ public class AdapterSach extends ArrayAdapter<Sach> {
     private int resource;
     private List<Sach> objects;
     private LayoutInflater inflater;
-
+    private ArrayList<Sach> arrayList;
 
     public AdapterSach(Context context, int resource, List objects) {
         super(context, resource, objects);
@@ -45,7 +48,7 @@ public class AdapterSach extends ArrayAdapter<Sach> {
         holder.tvmasach.setText("Mã: "+sach.maSach);
         holder.tvtensach.setText("Tên Sách: "+sach.tenSach);
         holder.tvgiathue.setText("Giá Thuê: "+sach.giaThue);
-        holder.tvmaloai.setText("Mã Loai: "+sach.maLoai);
+        holder.tvmaloai.setText("Mã Loại: "+sach.maLoai);
 
         return convertView;
     }
@@ -53,4 +56,19 @@ public class AdapterSach extends ArrayAdapter<Sach> {
     public class ViewHolder{
         TextView tvmasach,tvtensach,tvgiathue,tvmaloai;
     }
+    public void filter1(String charText){
+        charText = charText.toLowerCase(Locale.getDefault());
+        objects.clear();
+        if (charText.length() == 0){
+            objects.addAll(arrayList);
+        }else {
+            for (Sach sach : arrayList) {
+                if (sach.tenSach.toLowerCase(Locale.getDefault()).contains(charText)){
+                    objects.add(sach);
+                }
+            }
+        }
+        notifyDataSetChanged();
+    }
+
 }

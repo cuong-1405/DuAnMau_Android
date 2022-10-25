@@ -47,8 +47,8 @@ public class qlthanhvien extends Fragment {
     int a;
     int temp=0;
 
-    EditText txtnameuser, txtname, txtpass;
-    TextInputLayout tilusername, tilname,tilpass;
+    EditText txtnameuser, txtname, txtpass,txtGioiTinh;
+    TextInputLayout tilusername, tilname,tilpass,tilGioiTinh;
 
     List<PhieuMuon> phieuMuonList;
     PhieuMuonDAO phieuMuonDAO;
@@ -123,10 +123,12 @@ public class qlthanhvien extends Fragment {
         txtnameuser = dialog.findViewById(R.id.item_txtnameuser);
         txtname = dialog.findViewById(R.id.item_txtname);
         txtpass = dialog.findViewById(R.id.item_txtpass);
+        txtGioiTinh=dialog.findViewById(R.id.item_txtgioitinh);
 
         tilusername = dialog.findViewById(R.id.add_til_username);
         tilname = dialog.findViewById(R.id.add_til_name);
         tilpass = dialog.findViewById(R.id.add_til_pass);
+        tilGioiTinh=dialog.findViewById(R.id.add_til_gioitinh);
 
         Button btnadd = dialog.findViewById(R.id.dialog_add_add);
         Button btncancel = dialog.findViewById(R.id.dialog_add_cancel);
@@ -140,6 +142,7 @@ public class qlthanhvien extends Fragment {
             tilusername.setHint("Mã Thành Viên");
             tilname.setHint("Tên Thành Viên");
             tilpass.setHint("Năm Sinh Thành Viên");
+            tilGioiTinh.setHint("Giới tính");
 
             txtnameuser.setEnabled(false);
 
@@ -158,13 +161,15 @@ public class qlthanhvien extends Fragment {
                     if (temp==0){
                         thanhVien.hoTen = txtname.getText().toString();
                         thanhVien.namSinh = txtpass.getText().toString();
+                        thanhVien.gioiTinh= Integer.parseInt(txtGioiTinh.getText().toString());
                         if (dao.insert(thanhVien)>0){
                             Toast.makeText(getActivity(), "Thêm thành công", Toast.LENGTH_SHORT).show();
                             dialog.dismiss();
                             loadTable();
-                        }else{
-                            Toast.makeText(getActivity(), "Thêm thất bại", Toast.LENGTH_SHORT).show();
                         }
+//                        else{
+//                            Toast.makeText(getActivity(), "Thêm thất bại", Toast.LENGTH_SHORT).show();
+//                        }
                     }else {
                         temp=0;
                     }
@@ -183,6 +188,7 @@ public class qlthanhvien extends Fragment {
             tilusername.setHint("Mã Thành Viên");
             tilname.setHint("Tên Thành Viên");
             tilpass.setHint("Năm Sinh Thành Viên");
+            tilGioiTinh.setHint("Giới tính: ");
 
             btnadd.setText("Sửa");
             btncancel.setText("Xoá");
@@ -193,6 +199,7 @@ public class qlthanhvien extends Fragment {
             txtnameuser.setEnabled(false);
             txtname.setText(thanhVien.hoTen);
             txtpass.setText(thanhVien.namSinh);
+//            txtGioiTinh.setText(thanhVien.gioiTinh);
 
             btnadd.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -203,6 +210,7 @@ public class qlthanhvien extends Fragment {
                         thanhVien.maTV = Integer.parseInt(txtnameuser.getText().toString());
                         thanhVien.hoTen = txtname.getText().toString();
                         thanhVien.namSinh = txtpass.getText().toString();
+                        thanhVien.gioiTinh= Integer.parseInt(txtGioiTinh.getText().toString());
                         if (dao.update(thanhVien)<0){
                             Toast.makeText(getActivity(), "Sửa thất bại", Toast.LENGTH_SHORT).show();
                         }else {

@@ -1,9 +1,11 @@
 package com.example.NguyenCuong.DAO;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.example.NguyenCuong.model.ThanhVien;
 import com.example.NguyenCuong.sql.DbHelper;
@@ -25,6 +27,7 @@ public class ThanhVienDAO {
         ContentValues values = new ContentValues();
         values.put("hoTen",odj.hoTen);
         values.put("namSinh",odj.namSinh);
+        values.put("gioiTinh",odj.gioiTinh);
         return db.insert("ThanhVien",null,values);
     }
 
@@ -32,6 +35,7 @@ public class ThanhVienDAO {
         ContentValues values = new ContentValues();
         values.put("hoTen",odj.hoTen);
         values.put("namSinh",odj.namSinh);
+        values.put("gioiTinh",odj.gioiTinh);
         return db.update("ThanhVien",values,"maTV=?",new String[]{String.valueOf(odj.maTV)});
     }
 
@@ -50,14 +54,16 @@ public class ThanhVienDAO {
         return list.get(0);
     }
 
-    private List<ThanhVien> getData(String sql, String...selectionArgs){
-        List<ThanhVien> list = new ArrayList<ThanhVien>();
-        Cursor c = db.rawQuery(sql,selectionArgs);
+    @SuppressLint("Range")
+    public List<ThanhVien> getData(String sql, String...selectionArgs) {
+        List<ThanhVien> list = new ArrayList<>();
+        Cursor c = db.rawQuery(sql, selectionArgs);
         while (c.moveToNext()){
             ThanhVien obj = new ThanhVien();
-            obj.maTV = Integer.parseInt(c.getString(0));
-            obj.hoTen = c.getString(1);
-            obj.namSinh = c.getString(2);
+            obj.setMaTV(Integer.parseInt(c.getString(c.getColumnIndex("maTV"))));
+            obj.setHoTen(c.getString(c.getColumnIndex("hoTen")));
+            obj.setNamSinh(c.getString(c.getColumnIndex("namSinh")));
+            obj.setGioiTinh(Integer.parseInt(c.getString(c.getColumnIndex("gioiTinh"))));
             list.add(obj);
         }
         return list;

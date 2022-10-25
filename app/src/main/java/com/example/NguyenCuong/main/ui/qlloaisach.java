@@ -52,8 +52,8 @@ private FragmentQlloaisachBinding binding;
     int a;
     int temp=0;
 
-    EditText txtnameuser, txtname, txtpass;
-    TextInputLayout tilusername, tilname, tilpass;
+    EditText txtmaloai, txtnsx, txttenloai;
+    TextInputLayout tilmaloai, tilnsx, tiltenloai;
 
     List<Sach> sachList;
     SachDAO sachDAO;
@@ -112,7 +112,7 @@ private FragmentQlloaisachBinding binding;
 
         final Dialog dialog = new Dialog(getActivity());
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setContentView(R.layout.dialog_themtt);
+        dialog.setContentView(R.layout.dialog_loaisach);
 
         Window window = dialog.getWindow();
         if(window == null){
@@ -131,15 +131,15 @@ private FragmentQlloaisachBinding binding;
             dialog.setCancelable(false);
         }
 
-        TextView tvTile = (TextView) dialog.findViewById(R.id.item_tvtile);
+        TextView tvTile = (TextView) dialog.findViewById(R.id.item_tvtile1);
 
-        txtnameuser = dialog.findViewById(R.id.item_txtnameuser);
-        txtname = dialog.findViewById(R.id.item_txtname);
-        txtpass = dialog.findViewById(R.id.item_txtpass);
+        txtmaloai = dialog.findViewById(R.id.item_txtmaloai);
+        txtnsx = dialog.findViewById(R.id.item_txttenloai);
+        txttenloai = dialog.findViewById(R.id.item_txttenloai);
 
-        tilusername = dialog.findViewById(R.id.add_til_username);
-        tilname = dialog.findViewById(R.id.add_til_name);
-        tilpass = dialog.findViewById(R.id.add_til_pass);
+        tilmaloai = dialog.findViewById(R.id.add_til_maloai);
+        tilnsx = dialog.findViewById(R.id.add_til_nsx);
+        tiltenloai = dialog.findViewById(R.id.add_til_tenloai);
 
         Button btnadd = dialog.findViewById(R.id.dialog_add_add);
         Button btncancel = dialog.findViewById(R.id.dialog_add_cancel);
@@ -149,17 +149,17 @@ private FragmentQlloaisachBinding binding;
         if (a==-1){
             tvTile.setText("THÊM LOẠI SÁCH");
 
-            tilusername.setHint("Mã Loại Sách");
-            tilname.setHint("Nhà Sản Xuất");
-            tilpass.setHint("Tên Loại");
+            tilmaloai.setHint("Mã Loại Sách");
+            tilnsx.setHint("Nhà Sản Xuất");
+            tiltenloai.setHint("Tên Loại");
 
-            txtnameuser.setEnabled(false);
+            txtmaloai.setEnabled(false);
 
             if (list.size()==0){
-                txtnameuser.setText("1");
+                txtmaloai.setText("1");
             }else {
                 loaiSach = dao.getAll().get(list.size() - 1);
-                txtnameuser.setText(String.valueOf(loaiSach.maLoai + 1));
+                txtmaloai.setText(String.valueOf(loaiSach.maLoai + 1));
             }
 
             btnadd.setOnClickListener(new View.OnClickListener() {
@@ -168,8 +168,8 @@ private FragmentQlloaisachBinding binding;
                 public void onClick(View view) {
                     validate();
                     if (temp==0){
-                        loaiSach.nhaSX = txtname.getText().toString();
-                        loaiSach.tenLoai = txtpass.getText().toString();
+                        loaiSach.nhaSX = txtnsx.getText().toString();
+                        loaiSach.tenLoai = txttenloai.getText().toString();
                         if (dao.insert(loaiSach)>0){
                             Toast.makeText(getActivity(), "Thêm thành công", Toast.LENGTH_SHORT).show();
                             dialog.dismiss();
@@ -193,19 +193,19 @@ private FragmentQlloaisachBinding binding;
         }else{
             tvTile.setText("Sửa/Xóa Loại Sách");
 
-            tilusername.setHint("Mã Loại Sách");
-            tilname.setHint("Nhà Sản Xuất Loại Sách");
-            tilpass.setHint("Tên Loại Sách");
+            tilmaloai.setHint("Mã Loại Sách");
+            tilnsx.setHint("Nhà Sản Xuất Loại Sách");
+            tiltenloai.setHint("Tên Loại Sách");
 
             btnadd.setText("Sửa");
             btncancel.setText("Xoá");
 
             loaiSach = list.get(a);
 
-            txtnameuser.setText(String.valueOf(loaiSach.maLoai));
-            txtnameuser.setEnabled(false);
-            txtname.setText(loaiSach.nhaSX);
-            txtpass.setText(loaiSach.tenLoai);
+            txtmaloai.setText(String.valueOf(loaiSach.maLoai));
+            txtmaloai.setEnabled(false);
+            txtnsx.setText(loaiSach.nhaSX);
+            txttenloai.setText(loaiSach.tenLoai);
 
             btnadd.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -213,9 +213,9 @@ private FragmentQlloaisachBinding binding;
                     validate();
                     if (temp==0){
                         loaiSach = new LoaiSach();
-                        loaiSach.maLoai = Integer.parseInt(txtnameuser.getText().toString());
-                        loaiSach.nhaSX = txtname.getText().toString();
-                        loaiSach.tenLoai = txtpass.getText().toString();
+                        loaiSach.maLoai = Integer.parseInt(txtmaloai.getText().toString());
+                        loaiSach.nhaSX = txtnsx.getText().toString();
+                        loaiSach.tenLoai = txttenloai.getText().toString();
                         if (dao.update(loaiSach)<0){
                             Toast.makeText(getActivity(), "Sửa thất bại", Toast.LENGTH_SHORT).show();
                         }else {
@@ -257,17 +257,17 @@ private FragmentQlloaisachBinding binding;
     }
 
     private void validate(){
-        if(txtname.getText().length()==0){
-            tilname.setError("Nhà Sản Xuất không được để trống");
+        if(txtnsx.getText().length()==0){
+            tilnsx.setError("Nhà Sản Xuất không được để trống");
             temp++;
         }else{
-            tilname.setError("");
+            tilnsx.setError("");
         }
-        if(txtpass.getText().length()==0){
-            tilpass.setError("Tên Loại sách không được để trống");
+        if(txttenloai.getText().length()==0){
+            tiltenloai.setError("Tên Loại sách không được để trống");
             temp++;
         }else{
-            tilpass.setError("");
+            tiltenloai.setError("");
         }
     }
 
@@ -300,7 +300,6 @@ private FragmentQlloaisachBinding binding;
         });
         super.onCreateOptionsMenu(menu, inflater);
     }
-
 
     @Override
     public void onDestroyView() {

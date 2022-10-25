@@ -11,12 +11,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:text="THÊM TÀI KHOẢN"
+        android:text="Thêm loại sách "
         android:textSize="30dp"
-        android:id="@+id/item_tvtile" />
+        android:id="@+id/item_tvtile1" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/add_til_username"
+        android:id="@+id/add_til_maloai"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,14 +24,14 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:background="@drawable/bg1"
-            android:id="@+id/item_txtnameuser"
+            android:id="@+id/item_txtmaloai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Tên tài khoản" />
+            android:hint="Mã loại sách" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/add_til_name"
+        android:id="@+id/add_til_nsx"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,14 +39,14 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:background="@drawable/bg1"
-            android:id="@+id/item_txtname"
+            android:id="@+id/item_txtnsx"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Họ tên" />
+            android:hint="Nhà sản xuất" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/add_til_pass"
+        android:id="@+id/add_til_tenloai"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -54,24 +54,10 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:background="@drawable/bg1"
-            android:id="@+id/item_txtpass"
+            android:id="@+id/item_txttenloai"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Mật khẩu" />
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/add_til_gioitinh"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:background="@drawable/bg1"
-            android:id="@+id/item_txtgioitinh"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Giới tính" />
+            android:hint="Tên loại" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <LinearLayout

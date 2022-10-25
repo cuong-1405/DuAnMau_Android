@@ -40,30 +40,37 @@ public class AdapterLoaiSach extends ArrayAdapter<LoaiSach> {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder = new ViewHolder();
         if (convertView==null){
-            convertView = inflater.inflate(R.layout.item_lv_addtt,null);
-            holder.tvmatv = (TextView)convertView.findViewById(R.id.item_lv_username);
-            holder.tvtentv = (TextView)convertView.findViewById(R.id.item_lv_name);
-            holder.tvnamsinhtv = (TextView)convertView.findViewById(R.id.item_lv_pass);
+            convertView = inflater.inflate(R.layout.item_loaisach,null);
+            holder.tvma = (TextView)convertView.findViewById(R.id.item_lv_maloai);
+            holder.tvnsx = (TextView)convertView.findViewById(R.id.item_lv_nsx);
+            holder.m_Tenloai = (TextView)convertView.findViewById(R.id.item_lv_tenloai);
 
-            holder.temp1 = (TextView)convertView.findViewById(R.id.temp_1);
-            holder.temp2 = (TextView)convertView.findViewById(R.id.temp_2);
-            holder.temp3 = (TextView)convertView.findViewById(R.id.temp_3);
+            holder.temp1 = (TextView)convertView.findViewById(R.id.tv_maloai);
+            holder.temp2 = (TextView)convertView.findViewById(R.id.tv_nsx);
+            holder.temp3 = (TextView)convertView.findViewById(R.id.tv_tenloai);
 
             convertView.setTag(holder);
         }else{
             holder =(ViewHolder) convertView.getTag();
         }
         LoaiSach ls = objects.get(position);
-        holder.tvmatv.setText(String.valueOf(ls.maLoai));
-        holder.tvtentv.setText(ls.nhaSX);
-        holder.tvnamsinhtv.setText(ls.tenLoai);
+        holder.tvma.setText(String.valueOf(ls.maLoai));
+        holder.tvnsx.setText(ls.nhaSX);
+        holder.m_Tenloai.setText(ls.tenLoai);
 
-        if (ls.nhaSX.contains("A")&&ls.nhaSX.contains("N")){
+/*        if (ls.nhaSX.contains("A")&&ls.nhaSX.contains("N")){
             holder.tvtentv.setTextColor(Color.YELLOW);
         }else if (ls.nhaSX.contains("A")){
             holder.tvtentv.setTextColor(Color.RED);
         }else if (ls.nhaSX.contains("N")){
             holder.tvtentv.setTextColor(Color.GREEN);
+        }*/
+        if(ls.tenLoai.contains("A")){
+            holder.m_Tenloai.setTextColor(Color.RED);
+        }else if(ls.tenLoai.contains("N")){
+            holder.m_Tenloai.setTextColor(Color.GREEN);
+        }else {
+            holder.m_Tenloai.setTextColor(Color.BLACK);
         }
 
         holder.temp1.setText("Mã Loại Sách: ");
@@ -89,6 +96,6 @@ public class AdapterLoaiSach extends ArrayAdapter<LoaiSach> {
     }
 
     public class ViewHolder{
-        TextView tvmatv,tvtentv,tvnamsinhtv,temp1,temp2,temp3;
+        TextView tvma,tvnsx,m_Tenloai,temp1,temp2,temp3;
     }
 }

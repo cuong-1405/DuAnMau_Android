@@ -5,6 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.NguyenCuong.DAO.ThuThuDAO;
 import com.example.NguyenCuong.MainActivity;
@@ -17,6 +21,8 @@ import java.util.List;
 public class ManHinhChao extends AppCompatActivity {
     ThuThuDAO dao;
     List<ThuThu> list;
+    EditText MASV;
+    Button btnchuyen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,17 +31,25 @@ public class ManHinhChao extends AppCompatActivity {
         dao = new ThuThuDAO(ManHinhChao.this);
         list = new ArrayList<>();
         list = dao.getAll();
+        MASV=findViewById(R.id.masv);
+        btnchuyen=findViewById(R.id.btn1);
 
         if (list.size()==0){
             dao.insertadmin();
         }
 
-        new Handler().postDelayed(new Runnable() {
+        btnchuyen.setOnClickListener(new View.OnClickListener() {
+
             @Override
-            public void run() {
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                finish();
+            public void onClick(View v) {
+                if(MASV.getText().toString().equalsIgnoreCase("PH20178")){
+                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                    Toast.makeText(getApplication(), "Xác minh thành công", Toast.LENGTH_SHORT).show();
+                    finish();
+                }else{
+                    Toast.makeText(getApplication(), "Mã sinh viên không đúng", Toast.LENGTH_SHORT).show();
+                }
             }
-        },2000);
+        });
     }
 }

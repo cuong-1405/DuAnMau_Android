@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DbHelper extends SQLiteOpenHelper {
 
     static final String dbName="PNLIB";
-    static final int dbVersion=1;
+    static final int dbVersion=10;
 
     public DbHelper(Context context) {
         super(context, dbName, null, dbVersion);
@@ -26,7 +26,8 @@ public class DbHelper extends SQLiteOpenHelper {
         String createTableThanhVien="create table ThanhVien (" +
                 "maTV INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "hoTen text NOT NULL, " +
-                "namSinh text NOT NULL)";
+                "namSinh text NOT NULL,"+
+                "gioiTinh INTEGER NOT NULL)";
         db.execSQL(createTableThanhVien);
 
         String createTableLoaiSach="create table LoaiSach (" +

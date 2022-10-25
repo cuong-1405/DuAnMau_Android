@@ -1,6 +1,8 @@
 package com.example.NguyenCuong.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,12 +38,16 @@ public class AdapterThanhVien extends ArrayAdapter<ThanhVien> {
             holder.tvmatv = (TextView)convertView.findViewById(R.id.item_lv_username);
             holder.tvtentv = (TextView)convertView.findViewById(R.id.item_lv_name);
             holder.tvnamsinhtv = (TextView)convertView.findViewById(R.id.item_lv_pass);
+            holder.tvgioitinhtv = (TextView)convertView.findViewById(R.id.item_lv_gt);
 
             holder.temp1 = (TextView)convertView.findViewById(R.id.temp_1);
             holder.temp2 = (TextView)convertView.findViewById(R.id.temp_2);
             holder.temp3 = (TextView)convertView.findViewById(R.id.temp_3);
+            holder.temp4 = (TextView)convertView.findViewById(R.id.temp_4);
+
 
             convertView.setTag(holder);
+
         }else{
             holder =(ViewHolder) convertView.getTag();
         }
@@ -53,11 +59,21 @@ public class AdapterThanhVien extends ArrayAdapter<ThanhVien> {
         holder.temp1.setText("Mã Thành Viên: ");
         holder.temp2.setText("Tên Thành Viên: ");
         holder.temp3.setText("Năm Sinh: ");
-
-  return convertView;
+        holder.temp4.setText("Giới tính: ");
+        int gt=tv.getGioiTinh();
+        if(gt==0){
+            holder.temp4.setText("nam");
+        }else
+        {
+            holder.temp4.setText("nữ");
+            holder.temp4.setTextColor(Color.YELLOW);
+            holder.temp4.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+        }
+        return convertView;
     }
 
     public class ViewHolder{
-        TextView tvmatv,tvtentv,tvnamsinhtv,temp1,temp2,temp3;
+        TextView tvmatv,tvtentv,tvnamsinhtv,tvgioitinhtv,temp1,temp2,temp3,temp4;
     }
+
 }
