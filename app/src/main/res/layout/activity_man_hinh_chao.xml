@@ -9,11 +9,13 @@
 
 
         <ImageView
+            android:layout_centerHorizontal="true"
             android:id="@+id/img1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:src="@drawable/book"/>
     <TextView
+        android:id="@+id/tv1"
         android:layout_below="@+id/img1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,4 +25,25 @@
         android:layout_marginTop="10dp"
         android:textColor="@color/white"
         android:fontFamily="sans-serif-condensed"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tv1">
+
+    <EditText
+        android:id="@+id/masv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nhập mã sinh viên"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:textColorHint="@color/white"
+        android:textSize="30dp"/>
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đăng nhập"/>
+    </LinearLayout>
 </RelativeLayout>

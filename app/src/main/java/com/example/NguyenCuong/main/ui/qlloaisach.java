@@ -301,7 +301,6 @@ private FragmentQlloaisachBinding binding;
         super.onCreateOptionsMenu(menu, inflater);
     }
 
-
     @Override
     public void onDestroyView() {
         super.onDestroyView();

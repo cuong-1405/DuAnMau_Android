@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -20,6 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 
 import com.example.NguyenCuong.DAO.LoaiSachDAO;
@@ -37,6 +41,7 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 
 public class qlsach extends Fragment {
@@ -297,6 +302,37 @@ private FragmentQlsachBinding binding;
         }
     }
 
+
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        setHasOptionsMenu(true);
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.maingiaodien, menu);
+
+        MenuItem menuItem = menu.findItem(R.id.action_settings);
+        SearchView searchView = (SearchView) menuItem.getActionView();
+        searchView.setQueryHint("Nhập tìm kiếm");
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapterSach.filter1(newText);
+                listView.setAdapter(adapterSach);
+                return false;
+            }
+        });
+        super.onCreateOptionsMenu(menu, inflater);
+    }
 
     @Override
     public void onDestroyView() {

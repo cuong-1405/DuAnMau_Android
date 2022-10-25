@@ -43,7 +43,7 @@ public class AdapterLoaiSach extends ArrayAdapter<LoaiSach> {
             convertView = inflater.inflate(R.layout.item_lv_addtt,null);
             holder.tvmatv = (TextView)convertView.findViewById(R.id.item_lv_username);
             holder.tvtentv = (TextView)convertView.findViewById(R.id.item_lv_name);
-            holder.tvnamsinhtv = (TextView)convertView.findViewById(R.id.item_lv_pass);
+            holder.m_Tenloai = (TextView)convertView.findViewById(R.id.item_lv_pass);
 
             holder.temp1 = (TextView)convertView.findViewById(R.id.temp_1);
             holder.temp2 = (TextView)convertView.findViewById(R.id.temp_2);
@@ -56,14 +56,21 @@ public class AdapterLoaiSach extends ArrayAdapter<LoaiSach> {
         LoaiSach ls = objects.get(position);
         holder.tvmatv.setText(String.valueOf(ls.maLoai));
         holder.tvtentv.setText(ls.nhaSX);
-        holder.tvnamsinhtv.setText(ls.tenLoai);
+        holder.m_Tenloai.setText(ls.tenLoai);
 
-        if (ls.nhaSX.contains("A")&&ls.nhaSX.contains("N")){
+/*        if (ls.nhaSX.contains("A")&&ls.nhaSX.contains("N")){
             holder.tvtentv.setTextColor(Color.YELLOW);
         }else if (ls.nhaSX.contains("A")){
             holder.tvtentv.setTextColor(Color.RED);
         }else if (ls.nhaSX.contains("N")){
             holder.tvtentv.setTextColor(Color.GREEN);
+        }*/
+        if(ls.tenLoai.contains("A")){
+            holder.m_Tenloai.setTextColor(Color.RED);
+        }else if(ls.tenLoai.contains("N")){
+            holder.m_Tenloai.setTextColor(Color.GREEN);
+        }else {
+            holder.m_Tenloai.setTextColor(Color.BLACK);
         }
 
         holder.temp1.setText("Mã Loại Sách: ");
@@ -89,6 +96,6 @@ public class AdapterLoaiSach extends ArrayAdapter<LoaiSach> {
     }
 
     public class ViewHolder{
-        TextView tvmatv,tvtentv,tvnamsinhtv,temp1,temp2,temp3;
+        TextView tvmatv,tvtentv,m_Tenloai,temp1,temp2,temp3;
     }
 }
